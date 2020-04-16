@@ -1,0 +1,1 @@
+//Slider init statistics

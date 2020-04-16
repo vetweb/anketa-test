@@ -1,0 +1,40 @@
+// Base Colors
+$c-white: #fff;
+$c-black: #000;
+$c-red: #F30133;
+$c-dark-gray: #748090;
+$c-gray: #959595;
+$c-green: #25910D;
+$c-gray-blue-2: #40485a;
+$red: #ff4c4c;
+
+// Colors Components
+$c-text: $c-black;
+$c-link: $c-dark-gray;
+$c-logo-bg: $c-red;
+$c-logo-bg-hover: $c-dark-gray;
+$c-bg-btn: $c-white;
+$c-bg-btn-border: $c-dark-gray;
+$c-bg-btn-hover: $c-dark-gray;
+
+// Path
+$img-path: '/assets/img/';
+$img-path-icons: '/assets/img/icons/';
+$font-family: 'Roboto', sans-serif;
+
+// Indents base
+$indent-10: 10px;
+$indent-20: 20px;
+$indent-30: 30px;
+$indent-40: 40px;
+
+// Indents Component
+$b-indent: $indent-10;
+
+
+
+// Font size
+
+$fz-h2: 24px;
+$fz-h3: 20px;
+$fz-h4: 18px;
