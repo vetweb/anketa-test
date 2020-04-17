@@ -1,0 +1,38 @@
+.menu {
+  $this: &;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item-link {
+    position: relative;
+    max-width: 150px;
+    display: block;
+    padding: $indent-20 $indent-30;
+    background: $c-menu-bg;
+    @include transition(background 0.2s ease);
+
+    &:hover {
+      background: $c-menu-bg-hover;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 100%;
+      right: 0;
+      top: 0;
+      background: $c-gray-blue-2;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+}

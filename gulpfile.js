@@ -22,7 +22,7 @@ var paths = {
 };
 
 /**
- * Compile .twig files.
+ * Compile html files.
  */
 gulp.task('html', function () {
     'use strict';
@@ -73,6 +73,9 @@ gulp.task('js', function () {
 
 });
 
+/**
+ * Base js build
+ */
 gulp.task('js-main', function () {
     return gulp.src(paths.src + '/js/*.js')
 
@@ -100,21 +103,6 @@ gulp.task('img', function () {
         .pipe(gulp.dest(paths.build + 'img'));
 });
 
-/**
- * Watch scss files for changes & recompile
- * Watch .twig files run twig-rebuild then reload BrowserSync
- */
-
-/**
- * Recompile .twig files and live reload the browser
- */
-gulp.task('rebuild', gulp.series('html', 'js-main', 'js', function () {
-    browserSync.reload();
-}));
-
-/**
- * Wait for twig and sass tasks, then launch the browser-sync Server
- */
 gulp.task('browser-sync', function (done) {
     browserSync.init({
         server: {
@@ -123,18 +111,18 @@ gulp.task('browser-sync', function (done) {
         notify: false
     });
 
-        gulp.watch('./src/**/*.scss', gulp.series('rebuild'));
-        gulp.watch('./src/template/*.html', gulp.series('rebuild'));
-        gulp.watch('./src/**/**/*.js', gulp.series('rebuild'));
-    done();
+        gulp.watch('./src/**/*.scss', gulp.series('sass'));
+        gulp.watch('./src/template/*.html', gulp.series('html'));
+        gulp.watch('./src/**/**/*.js', gulp.series('js-main'));
+    done()
 });
 
 // Build task compile sass and twig.
 gulp.task('build', gulp.series('sass', 'html', 'js', 'js-main', 'img'));
 
 /**
- * Default task, running just `gulp` will compile the sass,
- * compile the jekyll site, launch BrowserSync then watch
+ * Default task, running just `gulp` will compile,
+ * launch BrowserSync then watch
  * files for changes
  */
 gulp.task('default', gulp.series('browser-sync'));

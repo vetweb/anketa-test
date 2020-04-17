@@ -1,0 +1,12 @@
+.dropdown-navigation-filter {
+  &__item {
+    width: 300px;
+    list-style: none;
+    margin-bottom: $indent-10;
+
+    a {
+      display: block;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.menu-brand {
+  margin-left: $indent-20;
+
+  &__logo {
+    width: 150px;
+    margin-bottom: $indent-20;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: $indent-20;
+
+    a {
+      font-size: 14px;
+      @include link();
+    }
+  }
+}

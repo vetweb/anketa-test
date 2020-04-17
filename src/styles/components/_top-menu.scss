@@ -1,3 +1,31 @@
 .top-menu {
+  display: flex;
 
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    padding: 0 $indent-10;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 100%;
+      right: 0;
+      top: 0;
+      background: $c-white;
+    }
+
+    a {
+      color: $c-white;
+      text-decoration: none;
+    }
+  }
+
+  &__login{
+    margin-left: $indent-10;
+  }
 }

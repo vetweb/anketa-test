@@ -1,0 +1,9 @@
+.panel-menu {
+  background: $c-menu-bg;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

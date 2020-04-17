@@ -1,4 +1,3 @@
-
 // Transitions
 @mixin transition($transitions...) {
   $unfoldedTransitions: ();
@@ -16,7 +15,7 @@
   height: $height;
 }
 
-@mixin flex-center() {
+@mixin flex-center {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -35,4 +34,14 @@
 
 .my-font-size {
   font-size: calculate-rem(30px);
+}
+
+@mixin link {
+  text-decoration: none;
+  color: $c-link;
+  @include transition(color 0.2s ease);
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

@@ -1,34 +1,19 @@
 .button {
   display: inline-block;
   padding: 15px 40px;
-  border-radius: 30px;
   font-size: 16px;
-  text-transform: uppercase;
-  color: $c-white !important;
+  color: $c-bg-btn-border;
   background: $c-bg-btn;
-  box-shadow: 0 30px 30px rgba(76, 169, 255, 0.3);
-  border: 0;
+  border: 1px solid $c-bg-btn-border;
   text-align: center;
-  transition: all 0.3s ease-in-out;
+  @include transition(background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out);
   cursor: pointer;
-  text-decoration: none !important;
+  text-decoration: none;
 
   &:hover {
-    background: darken($c-bg-btn, 10%);
-    box-shadow: 0 20px 20px rgba(76, 169, 255, 0.3);
-    text-decoration: none !important;
+    background: $c-bg-btn-hover;
+    color: $c-bg-btn;
+    text-decoration: none;
   }
 
-  &:focus {
-    outline: none;
-  }
-
-  &--white {
-    background: $c-white;
-    color: $c-link !important;
-
-    &:hover {
-      color: $c-white !important;
-    }
-  }
 }

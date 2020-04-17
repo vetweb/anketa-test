@@ -1,0 +1,14 @@
+.dropdown-menu {
+  position: absolute;
+  width: 100%;
+  background: #dccaff;
+
+  &__content {
+    padding: $indent-20 0;
+  }
+
+  &__navigation {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
