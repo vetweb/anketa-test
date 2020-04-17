@@ -34,9 +34,11 @@
 
 .icon-info {
   @extend .icon;
-  border: 1px silid $c-bg-btn-border;
+  @include size(25px);
+  border: 1px solid $c-black;
   border-radius: 50%;
   margin-right: $indent-10;
+  background-size: 80%;
 
   &__one {
     background-image: url("#{$img-path-icons}i-1.svg");

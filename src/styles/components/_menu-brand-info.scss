@@ -9,9 +9,11 @@
 
   &__description {
     font-weight: 300;
+    font-size: 14px;
   }
 
   &__icons {
     display: flex;
+    margin-bottom: $indent-10 / 2;
   }
 }
