@@ -7,6 +7,7 @@
 
   &__item {
     position: relative;
+    list-style: none;
     padding: 0 $indent-10;
 
     &:after {
@@ -22,6 +23,10 @@
     a {
       color: $c-white;
       text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 

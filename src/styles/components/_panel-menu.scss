@@ -6,4 +6,20 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  &__search {
+    position: absolute;
+    right: 60px;
+    top: 0;
+    width: calc(100% - 60px);
+    height: 100%;
+    transform: translate(0, 100%);
+    opacity: 0;
+    @include transition(transform 0.2s ease-in-out, opacity 0.2s ease-in-out);
+
+    &.open {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
 }

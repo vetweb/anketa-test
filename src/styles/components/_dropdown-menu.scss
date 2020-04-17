@@ -4,11 +4,22 @@
   background: #dccaff;
 
   &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: $indent-20 0;
   }
 
   &__navigation {
     display: flex;
     flex-wrap: wrap;
+    margin-right: $indent-40;
+  }
+
+  &__menu-brand-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    max-width: 1200px;
   }
 }

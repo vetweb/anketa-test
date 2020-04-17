@@ -1,0 +1,11 @@
+.search {
+  height: 100%;
+  border: 1px solid $c-border;
+
+  &__input {
+    @include size(100%);
+    background: $c-white;
+    border: none;
+    padding: $indent-10 $indent-20;
+  }
+}

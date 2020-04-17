@@ -12,14 +12,41 @@
   }
 
   &__search {
+    position: relative;
+    @include size(50px);
     overflow: hidden;
     text-indent: -999px;
     cursor: pointer;
-    background-image: url("#{$img-path-icons}i-search.svg");
+
+    &:after {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      @include size(20px);
+      background-image: url("#{$img-path-icons}i-search.svg");
+    }
   }
 }
 
+.icon-info {
+  @extend .icon;
+  border: 1px silid $c-bg-btn-border;
+  border-radius: 50%;
+  margin-right: $indent-10;
 
-.icon-one {
+  &__one {
+    background-image: url("#{$img-path-icons}i-1.svg");
+  }
 
+  &__check {
+    background-image: url("#{$img-path-icons}i-2.svg");
+  }
+
+  &__limit {
+    background-image: url("#{$img-path-icons}i-3.svg");
+  }
 }

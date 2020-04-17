@@ -1,0 +1,17 @@
+.menu-brand-info {
+  width: 25%;
+  padding-right: $indent-10;
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: $indent-20;
+  }
+
+  &__description {
+    font-weight: 300;
+  }
+
+  &__icons {
+    display: flex;
+  }
+}
